@@ -1,19 +1,3 @@
-// const grid = [
-
-//     [5, 3, 0, 0, 7, 0, 0, 0 ,0],
-//     [6, 0, 0, 1, 9, 5 ,0, 0, 0],
-//     [0, 9, 8, 0, 0, 0 ,0, 6, 0],
-
-//     [8, 0, 0, 0, 6, 0 ,0, 0, 3],
-//     [4, 0, 0, 8, 0, 3, 0, 0, 1],
-//     [7, 0, 0, 0, 2, 0, 0, 0, 6],
-
-//     [0, 6, 0, 0, 0 ,0, 2, 8, 0],
-//     [0, 0 ,0, 4, 1, 9, 0, 0, 5],
-//     [0, 0 ,0, 0, 8, 0, 0, 7, 9]
-    
-// ];
-
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -139,9 +123,10 @@ async function visualize(){
         do{
             temp = prompt("Speed of visualization? (in ms)");
         }while(temp <= 0 || isNaN(temp) || temp> 2000);
+        return temp;
     })();
-
-    for(step of steps){
+    while(steps[0]){
+        const step = steps.shift();
         baseGrid[step.y][step.x] = step.n;
         updateTable(baseGrid);
         await sleep(speed);

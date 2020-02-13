@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sudoku Solver</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            html, body{
+                height: 100%;
+            }
+            body{
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            table{ 
+                border-collapse: collapse;
+                font-family: Calibri, sans-serif;
+                margin: auto;
+            }
+            colgroup, tbody{ 
+                border: solid medium;
+            }
+            td{
+                font-size: 50px;
+                border: solid thin;
+                height: 1.4em;
+                width: 1.4em;
+                text-align: center;
+                padding: 0; 
+            }
+            button{
+                font-size: 40px;
+                margin-bottom: 5%;
+                width: 300px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+
+        
+            <table>
+              <caption style="font-size: 40px;">Sudoku solver visualization</caption>
+              <colgroup><col><col><col>
+              <colgroup><col><col><col>
+              <colgroup><col><col><col>
+              <tbody>
+               <tr> <td> <td>  <td> <td> <td>  <td> <td> <td>  <td>
+               <tr> <td>  <td> <td>  <td>  <td> <td>  <td>  <td> <td>
+               <tr> <td> <td>  <td>  <td>  <td>  <td>  <td>  <td>  <td>
+              <tbody>
+               <tr> <td> <td>  <td> <td>  <td> <td>  <td> <td>  <td>
+               <tr> <td>  <td>  <td>  <td>  <td>  <td>  <td>  <td>  <td>
+               <tr> <td> <td>  <td>  <td> <td>  <td> <td>  <td>  <td>
+              <tbody>
+               <tr> <td> <td>  <td>  <td>  <td> <td>  <td>  <td>  <td>
+               <tr> <td>  <td>  <td>  <td>  <td> <td>  <td>  <td>  <td>
+               <tr> <td> <td>  <td>  <td> <td>  <td> <td>  <td>  <td>
+            </table>
+
+            <button onclick="visualize()">Solve!</button>
+        
+        <script src="./index.js"></script>
+    </body>
+</html>
